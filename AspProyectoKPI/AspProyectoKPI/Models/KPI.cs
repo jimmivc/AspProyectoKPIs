@@ -16,7 +16,7 @@ namespace AspProyectoKPI.Models
         public string Formato { get; set; }
         public double Objetivo { get; set; }
         public bool Estado { get; set; }
-        public string Peridiocidad{ get; set; }
+        public string Periodicidad{ get; set; }
 
         public ParametroKPI Parametro { get; set; }
         public List<DetalleFormula> Formula { get; set; }

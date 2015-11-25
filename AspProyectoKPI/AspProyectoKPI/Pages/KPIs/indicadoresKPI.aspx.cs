@@ -49,7 +49,7 @@ namespace AspProyectoKPI.Paginas
             });
 
             foreach (var kpi in listaKpis)
-                tablaIndicadoresKPI.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, "");
+                tablaIndicadoresKPI.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, kpi.Periodicidad);
 
             Session["indicadoresKPI"] = tablaIndicadoresKPI;
         }
