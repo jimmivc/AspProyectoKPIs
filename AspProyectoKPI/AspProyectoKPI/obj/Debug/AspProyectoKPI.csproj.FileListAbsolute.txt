@@ -41,6 +41,6 @@ C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bi
 C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin\Antlr3.Runtime.pdb
 C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin\Newtonsoft.Json.xml
 C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin\Microsoft.AspNet.FriendlyUrls.xml
-C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\obj\Debug\AspProyectoKPI.csprojResolveAssemblyReference.cache
 C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\obj\Debug\AspProyectoKPI.dll
 C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\obj\Debug\AspProyectoKPI.pdb
+C:\Users\Jimmi\Documents\GitHub\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\obj\Debug\AspProyectoKPI.csprojResolveAssemblyReference.cache

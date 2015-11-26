@@ -47,9 +47,9 @@ namespace AspProyectoKPI.Paginas
                 new DataColumn("Objetivo",typeof(string)),
                 new DataColumn("Periodicidad",typeof(string))
             });
-
-            foreach (var kpi in listaKpis)
-                tablaIndicadoresKPI.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, kpi.Periodicidad);
+            if (listaKpis.Count > 0)
+                foreach (var kpi in listaKpis)
+                    tablaIndicadoresKPI.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, kpi.Periodicidad);
 
             Session["indicadoresKPI"] = tablaIndicadoresKPI;
         }
@@ -69,6 +69,21 @@ namespace AspProyectoKPI.Paginas
         protected void btnCrearKPI_Click(object sender, EventArgs e)
         {
             Response.Redirect("crearKPI.aspx");
+        }
+
+        protected void dtgIndicadoresKPI_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            RestClient client = new RestClient(ConfigurationManager.AppSettings.Get("endpoint"));
+            RestRequest request = new RestRequest("kpis/deshabilitar/{id}", Method.PUT);
+            GridViewRow row = dtgIndicadoresKPI.Rows[e.RowIndex];
+
+            request.AddUrlSegment("id", row.Cells[0].Text);
+            var response = client.Execute(request);
+
+            string json = response.Content;
+
+            loadKpiData();
+            bindData();
         }
 
     }

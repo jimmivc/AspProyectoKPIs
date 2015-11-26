@@ -11,6 +11,17 @@ namespace AspProyectoKPI.Models
         {
         }
 
+        public KPI(int id,string desc, string format, double objetive, string period, ParametroKPI param, List<DetalleFormula> form)
+        {
+            KPIID = id;
+            DescKpi = desc;
+            Formato = format;
+            Objetivo = objetive;
+            Periodicidad = period;
+            Parametro = param;
+            Formula = form;
+        }
+
         public int KPIID { get; set; }
         public string DescKpi { get; set; }
         public string Formato { get; set; }
