@@ -86,5 +86,11 @@ namespace AspProyectoKPI.Paginas
             bindData();
         }
 
+        protected void dtgIndicadoresKPI_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            Session["idIndicador"] = dtgIndicadoresKPI.Rows[e.NewSelectedIndex].Cells[0].Text;
+            Response.Redirect("consultarKPI");
+        }
+
     }
 }

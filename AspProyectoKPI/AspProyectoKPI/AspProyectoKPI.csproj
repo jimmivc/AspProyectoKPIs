@@ -115,6 +115,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Pages\KPIs\consultarKPI.aspx" />
     <Content Include="Pages\KPIs\crearKPI.aspx" />
     <Content Include="Pages\KPIs\indicadoresKPI.aspx" />
     <Content Include="Pages\IniciarSesion.aspx" />
@@ -195,6 +196,13 @@
     <Compile Include="Models\DetalleFormula.cs" />
     <Compile Include="Models\KPI.cs" />
     <Compile Include="Models\ParametroKPI.cs" />
+    <Compile Include="Pages\KPIs\consultarKPI.aspx.cs">
+      <DependentUpon>consultarKPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\KPIs\consultarKPI.aspx.designer.cs">
+      <DependentUpon>consultarKPI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\KPIs\crearKPI.aspx.cs">
       <DependentUpon>crearKPI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
