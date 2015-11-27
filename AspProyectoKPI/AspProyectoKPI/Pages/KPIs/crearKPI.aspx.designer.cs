@@ -76,6 +76,15 @@ namespace AspProyectoKPI.Pages.KPIs {
         protected global::System.Web.UI.WebControls.TextBox txtObjetivo;
         
         /// <summary>
+        /// btnAceptarObj control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAceptarObj;
+        
+        /// <summary>
         /// RegularExpressionValidator2 control.
         /// </summary>
         /// <remarks>
@@ -85,22 +94,22 @@ namespace AspProyectoKPI.Pages.KPIs {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
         
         /// <summary>
-        /// txtLimiteInf control.
+        /// ddlLimiteInf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLimiteInf;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLimiteInf;
         
         /// <summary>
-        /// txtLimiteSup control.
+        /// ddlLimiteSup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLimiteSup;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLimiteSup;
         
         /// <summary>
         /// Panel5 control.
@@ -146,6 +155,24 @@ namespace AspProyectoKPI.Pages.KPIs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPeriodicidad;
+        
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+        
+        /// <summary>
+        /// ddlDatos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDatos;
         
         /// <summary>
         /// Panel6 control.

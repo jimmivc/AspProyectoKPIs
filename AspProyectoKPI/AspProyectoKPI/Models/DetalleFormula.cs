@@ -12,6 +12,24 @@ namespace AspProyectoKPI.Models
 
         }
 
+        public DetalleFormula(int consecutivo, string tipo, string dato)
+        {
+            Consecutivo = consecutivo;
+            TipoDato = tipo;
+            if (tipo.Equals("campo"))
+            {
+                Tabla = dato;
+            }
+            else if (tipo.Equals("operador"))
+            {
+                DescCampoOperador = dato;
+            }
+            else if (tipo.Equals("valor"))
+            {
+                Valor = Convert.ToDouble(dato);
+            }
+        }
+
         public int DetalleFormulaID { get; set; }
 
         public int Consecutivo { get; set; }

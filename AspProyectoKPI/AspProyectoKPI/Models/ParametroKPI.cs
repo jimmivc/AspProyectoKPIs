@@ -7,9 +7,6 @@ namespace AspProyectoKPI.Models
 {
     public class ParametroKPI
     {
-        private string p1;
-        private string p2;
-
         public ParametroKPI()
         {
 
