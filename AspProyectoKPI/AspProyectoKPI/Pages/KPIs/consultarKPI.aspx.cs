@@ -64,5 +64,44 @@ namespace AspProyectoKPI.Pages.KPIs
         {
             Response.Redirect("indicadoresKPI.aspx");
         }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            txtDescripcion.ReadOnly = false;
+            ddlFormato.Enabled = true;
+            ddlPeriodicidad.Enabled = true;
+
+            ddlPeriodicidad.Items.Clear();
+            ddlFormato.Items.Clear();
+
+            ddlPeriodicidad.Items.Add("mensual");
+            ddlPeriodicidad.Items.Add("cuatrimestral");
+            ddlPeriodicidad.Items.Add("anual");
+
+            ddlFormato.Items.Add("123");
+            ddlFormato.Items.Add("123.4");
+            ddlFormato.Items.Add("%");
+
+            btnModificar.Visible = false;
+            btnGuardar.Visible = true;
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            RestClient client = new RestClient(ConfigurationManager.AppSettings.Get("endpoint"));
+            RestRequest request = new RestRequest("kpis/{id}", Method.PUT);
+
+            request.AddUrlSegment("id", (string)Session["idIndicador"]);
+            
+            KPI kpi = new KPI(Convert.ToInt32(Session["idIndicador"]),txtDescripcion.Text,ddlFormato.Text,Convert.ToDouble(txtObjetivo.Text),ddlPeriodicidad.Text,new ParametroKPI(),null);
+            kpi.Estado = true;
+            request.AddJsonBody(kpi);
+
+            var response = client.Execute(request);
+
+            string json = response.Content;
+
+            Response.Redirect("indicadoresKPI.aspx");
+        }
     }
 }

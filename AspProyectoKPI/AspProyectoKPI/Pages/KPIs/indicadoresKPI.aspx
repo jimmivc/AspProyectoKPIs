@@ -10,7 +10,7 @@
                 <asp:BoundField DataField="formato" HeaderText="Formato" />
                 <asp:BoundField DataField="objetivo" HeaderText="Objetivo" ReadOnly="True" />
                 <asp:BoundField DataField="periodicidad" HeaderText="Periodicidad" />
-                <asp:CommandField ShowEditButton="True" ButtonType="Button" DeleteText="Deshabilitar" ShowDeleteButton="True" ShowSelectButton="True" SelectText="Consultar" >
+                <asp:CommandField ButtonType="Button" DeleteText="Deshabilitar" ShowDeleteButton="True" ShowSelectButton="True" SelectText="Consultar" NewText="Asignar" >
                 <ControlStyle CssClass="btn btn-default" />
                 </asp:CommandField>
             </Columns>
@@ -18,7 +18,7 @@
         </asp:Panel>
         <asp:Panel ID="Panel2" runat="server">
             <asp:Button ID="btnCrearKPI" runat="server" CssClass="btn btn-primary" Text="Crear KPI" OnClick="btnCrearKPI_Click" />
-            <asp:Button ID="btnAsignar" runat="server" CssClass="btn btn-primary" Text="Asignar KPIs" />
+            <asp:Button ID="btnAsignar" runat="server" CssClass="btn btn-primary" Text="Asignar KPIs" OnClick="btnAsignar_Click" />
         </asp:Panel>
     </asp:Panel>
 </asp:Content>
