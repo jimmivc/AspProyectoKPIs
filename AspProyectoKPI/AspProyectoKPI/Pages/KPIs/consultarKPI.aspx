@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="consultarKPI.aspx.cs" Inherits="AspProyectoKPI.Pages.KPIs.consultarKPI" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="consultarKPI.aspx.cs" Inherits="AspProyectoKPI.Pages.KPIs.consultarKPI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel ID="Panel1" runat="server" BorderColor="Transparent" BorderWidth="50px" CssClass="panel panel-default" Font-Bold="True" GroupingText="Indicador KPI">
         <asp:Panel ID="Panel3" runat="server" CssClass="panel">
@@ -39,6 +39,8 @@
         </asp:Panel>
         <asp:Panel ID="Panel7" runat="server" CssClass="panel">
                 <asp:Button ID="btnCrear" runat="server" CssClass="btn btn-primary" Text="Volver" OnClick="btnCrear_Click" />
-            </asp:Panel>
+                <asp:Button ID="btnModificar" runat="server" CssClass="btn btn-primary" OnClick="btnModificar_Click" Text="Modificar" />
+                <asp:Button ID="btnGuardar" runat="server" CssClass="btn btn-primary" OnClick="btnGuardar_Click" Text="Guardar" Visible="False" />
+        </asp:Panel>
     </asp:Panel>
 </asp:Content>

@@ -10,7 +10,7 @@
                 <asp:BoundField DataField="formato" HeaderText="Formato" />
                 <asp:BoundField DataField="objetivo" HeaderText="Objetivo" ReadOnly="True" />
                 <asp:BoundField DataField="periodicidad" HeaderText="Periodicidad" />
-                <asp:CommandField ShowEditButton="True" ButtonType="Button" DeleteText="Deshabilitar" ShowDeleteButton="True" ShowSelectButton="True" SelectText="Consultar" NewText="Asignar" >
+                <asp:CommandField ButtonType="Button" DeleteText="Deshabilitar" ShowDeleteButton="True" ShowSelectButton="True" SelectText="Consultar" NewText="Asignar" >
                 <ControlStyle CssClass="btn btn-default" />
                 </asp:CommandField>
             </Columns>
