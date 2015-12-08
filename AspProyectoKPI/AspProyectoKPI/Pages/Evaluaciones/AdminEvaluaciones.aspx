@@ -20,7 +20,7 @@
   </div>
   <div class="col-sm-6"><h3>Gestión de encuestas</h3>
       <p>Gestión de encuestas, creación de plantillas, generación de encuestas y envío a estudiantes</p>
-      <asp:Button ID="Button2" runat="server" Text="Gestión de encuestas" CssClass="btn btn-default"/>
+      <asp:Button ID="Button2" runat="server" Text="Gestión de encuestas" CssClass="btn btn-default" OnClick="Button2_Click"/>
       
   </div>
   <div class="row">

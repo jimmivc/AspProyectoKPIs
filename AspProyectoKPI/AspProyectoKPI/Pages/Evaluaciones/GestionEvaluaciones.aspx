@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="GestionEvaluaciones.aspx.cs" Inherits="AspProyectoKPI.Pages.Evaluaciones.GestionEvaluaciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:Panel ID="Panel1" CssClass="panel panel-default" runat="server" GroupingText="Crear Plantilla">
-        <asp:GridView ID="dtgPreguntas" runat="server" CssClass="table table-striped table-hover" OnSelectedIndexChanged="Page_Load">
+        <asp:GridView ID="dtgPreguntas" runat="server" CssClass="table table-striped table-hover">
             <Columns>
                 <asp:TemplateField HeaderText="Agregar">
                     <ItemTemplate>

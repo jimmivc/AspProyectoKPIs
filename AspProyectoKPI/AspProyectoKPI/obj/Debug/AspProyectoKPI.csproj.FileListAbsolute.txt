@@ -87,3 +87,4 @@ C:\Users\Owner\Documents\Repos\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin
 C:\Users\Owner\Documents\Repos\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin\System.Web.Optimization.xml
 C:\Users\Owner\Documents\Repos\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin\Newtonsoft.Json.xml
 C:\Users\Owner\Documents\Repos\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Owner\Documents\Repos\AspProyectoKPIs\AspProyectoKPI\AspProyectoKPI\obj\Debug\AspProyectoKPI.csprojResolveAssemblyReference.cache
