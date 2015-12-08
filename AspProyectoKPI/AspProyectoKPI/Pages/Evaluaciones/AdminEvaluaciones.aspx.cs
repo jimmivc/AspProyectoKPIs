@@ -13,5 +13,15 @@ namespace AspProyectoKPI.Pages.KPIs
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GestionPreguntas.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GestionEvaluaciones.aspx");
+        }
     }
 }
