@@ -15,7 +15,7 @@
    <div class="row">
   <div class="col-sm-6"><h3>Mantenimiento de encuestas</h3>
       <p>Gestión de preguntas para encuesta, creación de preguntas, modificación, categorización y asignación de rangos de calificación</p>
-      <asp:Button ID="Button1" runat="server" Text="Gestión de preguntas" CssClass="btn btn-default" />
+      <asp:Button ID="Button1" runat="server" Text="Gestión de preguntas" CssClass="btn btn-default" OnClick="Button1_Click" />
 
   </div>
   <div class="col-sm-6"><h3>Gestión de encuestas</h3>
