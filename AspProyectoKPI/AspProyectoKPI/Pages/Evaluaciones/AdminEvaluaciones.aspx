@@ -15,14 +15,12 @@
    <div class="row">
   <div class="col-sm-6"><h3>Mantenimiento de encuestas</h3>
       <p>Gestión de preguntas para encuesta, creación de preguntas, modificación, categorización y asignación de rangos de calificación</p>
-
-      <a runat="server" href="~/Pages/Evaluaciones/GestionPreguntas" class="btn btn-default btn-lg">Gestión de preguntas</a>
-      
+      <asp:Button ID="Button1" runat="server" Text="Gestión de preguntas" CssClass="btn btn-default" OnClick="Button1_Click" />
 
   </div>
   <div class="col-sm-6"><h3>Gestión de encuestas</h3>
       <p>Gestión de encuestas, creación de plantillas, generación de encuestas y envío a estudiantes</p>
-      <a runat="server" href="~/Pages/Evaluaciones/GestionEncuestas" class="btn btn-default btn-lg">Gestión de encuestas</a>
+      <asp:Button ID="Button2" runat="server" Text="Gestión de encuestas" CssClass="btn btn-default" OnClick="Button2_Click"/>
       
   </div>
   <div class="row">
