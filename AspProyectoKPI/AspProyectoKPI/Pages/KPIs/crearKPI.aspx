@@ -23,13 +23,17 @@
                 <asp:Label ID="Label3" runat="server" Text="Formato"></asp:Label>
                 <asp:DropDownList ID="ddlFormato" runat="server" CssClass="form-control">
                     <asp:ListItem>123</asp:ListItem>
-                    <asp:ListItem>noob</asp:ListItem>
+                    <asp:ListItem>123.4</asp:ListItem>
+                    <asp:ListItem>%</asp:ListItem>
                 </asp:DropDownList>
                 <asp:Label ID="Label4" runat="server" Text="Periodicidad"></asp:Label>
                 <asp:DropDownList ID="ddlPeriodicidad" runat="server" CssClass="form-control">
                     <asp:ListItem>mensual</asp:ListItem>
-                    <asp:ListItem>you</asp:ListItem>
+                    <asp:ListItem>cuatrimestral</asp:ListItem>
+                    <asp:ListItem>anual</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
                 <asp:Label ID="Label7" runat="server" Text="Datos"></asp:Label>
                 <asp:DropDownList ID="ddlDatos" runat="server" CssClass="form-control">
                     <asp:ListItem></asp:ListItem>
