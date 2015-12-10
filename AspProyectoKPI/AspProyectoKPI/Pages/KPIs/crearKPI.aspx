@@ -9,6 +9,7 @@
         <asp:Panel ID="Panel4" runat="server" CssClass="form-inline">
             <div class="form-group">
                 <asp:Label ID="Label2" runat="server" Text="Objetivo"></asp:Label>
+                <br />
                 <asp:TextBox ID="txtObjetivo" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:Button ID="btnAceptarObj" runat="server" CssClass="btn btn-default" OnClick="btnAceptarObj_Click" Text="Aceptar" />
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtObjetivo" Display="Dynamic" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
@@ -50,6 +51,10 @@
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem>Llamadas</asp:ListItem>
                         <asp:ListItem>Llamadas Efectivas</asp:ListItem>
+                        <asp:ListItem>Promedio Duracion Efectivas</asp:ListItem>
+                        <asp:ListItem>Duracion Llamadas Efectivas</asp:ListItem>
+                        <asp:ListItem>Cantidad Ventas</asp:ListItem>
+                        <asp:ListItem>Monto Ventas</asp:ListItem>
                     </asp:DropDownList>
                     <asp:Label ID="Label6" runat="server" Text="Valor"></asp:Label>
                     <asp:TextBox ID="txtValor" runat="server" CssClass="form-control"></asp:TextBox>
