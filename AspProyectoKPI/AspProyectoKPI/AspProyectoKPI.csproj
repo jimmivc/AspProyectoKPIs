@@ -117,7 +117,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pages\Evaluaciones\AdminEvaluaciones.aspx" />
-    <Content Include="Pages\Evaluaciones\GestionEvaluaciones.aspx" />
     <Content Include="Pages\KPIs\asignarIndicadoresKPI.aspx" />
     <Content Include="Pages\KPIs\consultarKPI.aspx" />
     <Content Include="Pages\KPIs\crearKPI.aspx" />
@@ -202,8 +201,6 @@
     <Compile Include="Models\DetalleFormula.cs" />
     <Compile Include="Models\KPI.cs" />
     <Compile Include="Models\ParametroKPI.cs" />
-    <Compile Include="Models\Plantilla.cs" />
-    <Compile Include="Models\PlantillaDetalle.cs" />
     <Compile Include="Models\Pregunta.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Pages\Evaluaciones\AdminEvaluaciones.aspx.cs">
@@ -212,13 +209,6 @@
     </Compile>
     <Compile Include="Pages\Evaluaciones\AdminEvaluaciones.aspx.designer.cs">
       <DependentUpon>AdminEvaluaciones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Evaluaciones\GestionEvaluaciones.aspx.cs">
-      <DependentUpon>GestionEvaluaciones.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Evaluaciones\GestionEvaluaciones.aspx.designer.cs">
-      <DependentUpon>GestionEvaluaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\KPIs\asignarIndicadoresKPI.aspx.cs">
       <DependentUpon>asignarIndicadoresKPI.aspx</DependentUpon>
