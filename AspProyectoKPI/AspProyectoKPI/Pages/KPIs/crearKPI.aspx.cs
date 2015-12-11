@@ -29,8 +29,10 @@ namespace AspProyectoKPI.Pages.KPIs
         {
             if (!txtValor.Text.Equals(""))
             {
-                armarFormula(txtValor.Text);
-                variables.Add("valor");
+                if (armarFormula(txtValor.Text))
+                {
+                    variables.Add("valor");
+                }
                 txtValor.Text = "";
             }
         }
@@ -39,8 +41,10 @@ namespace AspProyectoKPI.Pages.KPIs
         {
             if (ddlCampo.SelectedIndex != 0)
             {
-                armarFormula(ddlCampo.Text);
-                variables.Add("campo");
+                if (armarFormula(ddlCampo.Text))
+                {
+                    variables.Add("campo");
+                }
                 ddlCampo.SelectedIndex = 0;
             }
         }
@@ -135,11 +139,14 @@ namespace AspProyectoKPI.Pages.KPIs
             }
         }
 
-        private void armarFormula(string dato){
+        private bool armarFormula(string dato){
+            bool agregado = false;
+
             if (operador == false && !isOperador(dato))
             {
                 formula.Add(dato);
                 operador = true;
+                agregado = true;
             }
             else
             {
@@ -148,6 +155,7 @@ namespace AspProyectoKPI.Pages.KPIs
                     formula.Add(dato);
                     variables.Add("operador");
                     operador = false;
+                    agregado = true;
                 }
                 else
                 {
@@ -158,6 +166,8 @@ namespace AspProyectoKPI.Pages.KPIs
 
             foreach (string dat in formula)
                 txtFormula.Text += dat;
+
+            return agregado;
         }
 
         private bool isOperador(string dato)
