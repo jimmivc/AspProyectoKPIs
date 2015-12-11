@@ -39,19 +39,26 @@ namespace AspProyectoKPI.Paginas
             string json = response.Content;
 
             List<KPI> listaKpis = JsonConvert.DeserializeObject<List<KPI>>(json);
-
-            DataTable tablaIndicadoresKPI = new DataTable("kpis");
-            tablaIndicadoresKPI.Columns.AddRange(new DataColumn[5] {new DataColumn("ID",typeof(int)),
+            if (listaKpis != null)
+            {
+                DataTable tablaIndicadoresKPI = new DataTable("kpis");
+                tablaIndicadoresKPI.Columns.AddRange(new DataColumn[5] {new DataColumn("ID",typeof(int)),
                 new DataColumn("Descripcion",typeof(string)),
                 new DataColumn("Formato",typeof(string)),
                 new DataColumn("Objetivo",typeof(string)),
                 new DataColumn("Periodicidad",typeof(string))
-            });
+                });
+                if (listaKpis.Count > 0)
+                    foreach (var kpi in listaKpis)
+                        tablaIndicadoresKPI.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, kpi.Periodicidad);
 
-            foreach (var kpi in listaKpis)
-                tablaIndicadoresKPI.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, kpi.Periodicidad);
-
-            Session["indicadoresKPI"] = tablaIndicadoresKPI;
+                Session["indicadoresKPI"] = tablaIndicadoresKPI;
+            }
+            else
+            {
+                btnAsignar.Visible = false;
+                btnCrearKPI.Visible = false;
+            }
         }
 
         protected void dtgIndicadoresKPI_RowEditing(object sender, GridViewEditEventArgs e)
@@ -69,6 +76,32 @@ namespace AspProyectoKPI.Paginas
         protected void btnCrearKPI_Click(object sender, EventArgs e)
         {
             Response.Redirect("crearKPI.aspx");
+        }
+
+        protected void dtgIndicadoresKPI_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            RestClient client = new RestClient(ConfigurationManager.AppSettings.Get("endpoint"));
+            RestRequest request = new RestRequest("kpis/deshabilitar/{id}", Method.PUT);
+            GridViewRow row = dtgIndicadoresKPI.Rows[e.RowIndex];
+
+            request.AddUrlSegment("id", row.Cells[0].Text);
+            var response = client.Execute(request);
+
+            string json = response.Content;
+
+            loadKpiData();
+            bindData();
+        }
+
+        protected void dtgIndicadoresKPI_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            Session["idIndicador"] = dtgIndicadoresKPI.Rows[e.NewSelectedIndex].Cells[0].Text;
+            Response.Redirect("consultarKPI");
+        }
+
+        protected void btnAsignar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("asignarIndicadoresKPI.aspx");
         }
 
     }

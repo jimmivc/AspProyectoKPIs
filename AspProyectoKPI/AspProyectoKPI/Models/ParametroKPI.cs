@@ -11,6 +11,12 @@ namespace AspProyectoKPI.Models
         {
 
         }
+        public ParametroKPI(int inf, int sup)
+        {
+            LimiteInferior = inf;
+            LimiteSuperior = sup;
+        }
+
         public int ParametroKPIID { get; set; }
 
         public int LimiteSuperior { get; set; }
