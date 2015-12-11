@@ -1,4 +1,5 @@
 ﻿using AspProyectoKPI.Models;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -40,6 +41,7 @@ namespace AspProyectoKPI.Pages.KPIs
             {
                 armarFormula(ddlCampo.Text);
                 variables.Add("campo");
+                ddlCampo.SelectedIndex = 0;
             }
         }
 
@@ -57,27 +59,55 @@ namespace AspProyectoKPI.Pages.KPIs
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
-            RestClient client = new RestClient(ConfigurationManager.AppSettings.Get("endpoint"));
-            RestRequest request = new RestRequest("kpis/", Method.POST);
-
-            List<DetalleFormula> formulaCompleta = new List<DetalleFormula>();
-
-            for (int i = 0; i < formula.Count; i++)
+            if (validarCampos())
             {
-                formulaCompleta.Add(new DetalleFormula(i, variables[i], formula[i]));
+                RestClient client = new RestClient(ConfigurationManager.AppSettings.Get("endpoint"));
+                RestRequest request = new RestRequest("kpis/", Method.POST);
+
+                List<DetalleFormula> formulaCompleta = new List<DetalleFormula>();
+
+                for (int i = 0; i < formula.Count; i++)
+                {
+                    formulaCompleta.Add(new DetalleFormula(i, variables[i], formula[i]));
+                }
+
+                KPI kpiNuevo = new KPI(0, txtDescripcion.Text, ddlFormato.Text, Convert.ToDouble(txtObjetivo.Text), ddlPeriodicidad.Text, new ParametroKPI(Convert.ToInt32(ddlLimiteInf.Text), Convert.ToInt32(ddlLimiteSup.Text)), formulaCompleta);
+
+                request.AddJsonBody(kpiNuevo);
+
+                var response = client.Execute(request);
+
+                formula = new List<string>();
+                variables = new List<string>();
+                operador = false;
+
+                Response.Redirect("indicadoresKPI.aspx");
             }
+            else
+            {
+                //"error"
+            }
+        }
 
-            KPI kpiNuevo = new KPI(0, txtDescripcion.Text, ddlFormato.Text, Convert.ToDouble(txtObjetivo.Text), ddlPeriodicidad.Text, new ParametroKPI(Convert.ToInt32(ddlLimiteInf.Text), Convert.ToInt32(ddlLimiteSup.Text)),formulaCompleta);
+        private bool validarCampos()
+        {
+            bool resul = false;
+            if (!txtDescripcion.Text.Equals("") && !txtFormula.Text.Equals("") && !ddlFormato.SelectedItem.Equals("") && !txtObjetivo.Text.Equals("") && !ddlPeriodicidad.SelectedItem.Equals("") && ddlLimiteInf.Items.Count>0 && ddlLimiteSup.Items.Count>0)
+            {
+                if (!variables[variables.Count - 1].Equals("operador"))
+                {
 
-            request.AddJsonBody(kpiNuevo);
+                    resul = true;
 
-            var response = client.Execute(request);
-
-            formula = new List<string>();
-            variables = new List<string>();
-            operador = false;
-
-            Response.Redirect("indicadoresKPI.aspx");
+                }
+                else
+                {
+                    //MessageBox.Show("formula incompleta");
+                }
+            }else{
+                //datos incompletos
+            }
+            return resul;
         }
 
         protected void btnAceptarObj_Click(object sender, EventArgs e)
@@ -138,5 +168,42 @@ namespace AspProyectoKPI.Pages.KPIs
                 return false;
         }
 
+        protected void ddlDatos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!ddlDatos.SelectedItem.ToString().Equals(""))
+            {
+                RestClient client = new RestClient(ConfigurationManager.AppSettings.Get("endpoint"));
+                RestRequest request = new RestRequest("kpis/datos/{campos}", Method.GET);
+
+                request.AddUrlSegment("campos", ddlDatos.SelectedItem.ToString());
+
+                var response = client.Execute(request);
+
+                string json = response.Content;
+
+                List<string> datos = JsonConvert.DeserializeObject<List<string>>(json);
+                ddlCampo.Items.Clear();
+                ddlCampo.Items.Add("");
+                foreach (var dat in datos)
+                {
+                    ddlCampo.Items.Add(dat);
+                }
+                borrar();
+            }
+            
+        }
+
+        protected void btnBorrar_Click(object sender, EventArgs e)
+        {
+            borrar();
+        }
+
+        private void borrar()
+        {
+            formula = new List<string>();
+            variables = new List<string>();
+            operador = false;
+            txtFormula.Text = "";
+        }
     }
 }
