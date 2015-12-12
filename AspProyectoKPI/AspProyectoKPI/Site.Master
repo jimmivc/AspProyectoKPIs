@@ -14,7 +14,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link href="~/content/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form runat="server">
@@ -39,6 +39,8 @@
             </Scripts>
         </asp:ScriptManager>
 
+        <% if ( Session.Count>0) { %>
+
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -54,8 +56,6 @@
                         <li class="active"><a runat="server" href="~/">Inicio</a></li>
                         <li><a runat="server" href="~/Pages/KPIs/IndicadoresKPI">KPIs</a></li>
                         <li><a runat="server" href="~/Pages/Evaluaciones/AdminEvaluaciones">Evaluaciones</a></li>
-                        <li><a runat="server" href="~/Pages/Evaluaciones/ResultadosEvaluaciones">Mis Resultados</a></li>
-                        <li><a runat="server" href="~/Pages/Evaluaciones/EvalucionesEstudiantes">Mis Evaluaciones</a></li>
                         <li><a runat="server" href="~/Pages/KPIs/ResultadosKPI">Resultados KPIs</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -103,6 +103,12 @@
             </div>
         </nav>
 
+        <% } else { %>
+        
+        <div></div>
+
+        <% } %>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -112,6 +118,12 @@
             </footer>
         </div>
 
+        <script type="text/javascript">
+
+            $("#holi").addClass("hide");
+        </script>
+        
     </form>
+    
 </body>
 </html>

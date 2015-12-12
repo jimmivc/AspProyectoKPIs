@@ -1,29 +1,19 @@
-﻿using System;
+﻿using AspProyectoKPI.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace AspProyectoKPI.Models
+namespace ApiProyectoKPI.Models
 {
-   
     public class Usuario
     {
-
         public Usuario()
         {
 
         }
-        public Usuario(int id, string nombre, string apellido, string correo, string contrasena, int cedula, bool isActivo, Rol rol)
-        {
-            UsuarioID = id;
-            Nombre = nombre;
-            Apellidos = apellido;
-            Correo = correo;
-            Contrasena = contrasena;
-            Cedula = cedula;
-            IsActivo = isActivo;
-            Rol = rol;
-        }
+
         public int UsuarioID { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
@@ -32,7 +22,6 @@ namespace AspProyectoKPI.Models
         public int Cedula { get; set; }
         public bool IsActivo { get; set; }
         public Rol Rol { get; set; }
-
 
     }
 }

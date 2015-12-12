@@ -107,6 +107,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\login.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\CenfoLogo.gif" />
@@ -117,7 +118,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pages\Evaluaciones\AdminEvaluaciones.aspx" />
-    <Content Include="Pages\Evaluaciones\GenerarEncuesta.aspx" />
+    <Content Include="Pages\Evaluaciones\GestionEvaluaciones.aspx" />
     <Content Include="Pages\KPIs\asignarIndicadoresKPI.aspx" />
     <Content Include="Pages\KPIs\consultarKPI.aspx" />
     <Content Include="Pages\KPIs\crearKPI.aspx" />
@@ -130,6 +131,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\login.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -200,18 +202,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Categoria.cs" />
-    <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\DetalleFormula.cs" />
-    <Compile Include="Models\EncuestaDetalle.cs" />
-    <Compile Include="Models\EncuestaMaestro.cs" />
     <Compile Include="Models\KPI.cs" />
     <Compile Include="Models\ParametroKPI.cs" />
+    <Compile Include="Models\Permiso.cs" />
     <Compile Include="Models\Plantilla.cs" />
     <Compile Include="Models\PlantillaDetalle.cs" />
     <Compile Include="Models\Pregunta.cs" />
-    <Compile Include="Models\RelacionCursos.cs" />
     <Compile Include="Models\Rol.cs" />
-    <Compile Include="Models\TipoCurso.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Pages\Evaluaciones\AdminEvaluaciones.aspx.cs">
       <DependentUpon>AdminEvaluaciones.aspx</DependentUpon>
@@ -220,12 +218,12 @@
     <Compile Include="Pages\Evaluaciones\AdminEvaluaciones.aspx.designer.cs">
       <DependentUpon>AdminEvaluaciones.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Evaluaciones\GenerarEncuesta.aspx.cs">
-      <DependentUpon>GenerarEncuesta.aspx</DependentUpon>
+    <Compile Include="Pages\Evaluaciones\GestionEvaluaciones.aspx.cs">
+      <DependentUpon>GestionEvaluaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Evaluaciones\GenerarEncuesta.aspx.designer.cs">
-      <DependentUpon>GenerarEncuesta.aspx</DependentUpon>
+    <Compile Include="Pages\Evaluaciones\GestionEvaluaciones.aspx.designer.cs">
+      <DependentUpon>GestionEvaluaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\KPIs\asignarIndicadoresKPI.aspx.cs">
       <DependentUpon>asignarIndicadoresKPI.aspx</DependentUpon>
@@ -271,6 +269,7 @@
     </Compile>
     <Compile Include="Pages\KPIs\resultadosKPI.aspx.cs">
       <DependentUpon>resultadosKPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\KPIs\resultadosKPI.aspx.designer.cs">
       <DependentUpon>resultadosKPI.aspx</DependentUpon>
