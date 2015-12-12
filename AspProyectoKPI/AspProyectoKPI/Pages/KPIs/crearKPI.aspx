@@ -9,6 +9,7 @@
         <asp:Panel ID="Panel4" runat="server" CssClass="form-inline">
             <div class="form-group">
                 <asp:Label ID="Label2" runat="server" Text="Objetivo"></asp:Label>
+                <br />
                 <asp:TextBox ID="txtObjetivo" runat="server" CssClass="form-control"></asp:TextBox>
                 <asp:Button ID="btnAceptarObj" runat="server" CssClass="btn btn-default" OnClick="btnAceptarObj_Click" Text="Aceptar" />
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtObjetivo" Display="Dynamic" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
@@ -23,15 +24,19 @@
                 <asp:Label ID="Label3" runat="server" Text="Formato"></asp:Label>
                 <asp:DropDownList ID="ddlFormato" runat="server" CssClass="form-control">
                     <asp:ListItem>123</asp:ListItem>
-                    <asp:ListItem>noob</asp:ListItem>
+                    <asp:ListItem>123.4</asp:ListItem>
+                    <asp:ListItem>%</asp:ListItem>
                 </asp:DropDownList>
                 <asp:Label ID="Label4" runat="server" Text="Periodicidad"></asp:Label>
                 <asp:DropDownList ID="ddlPeriodicidad" runat="server" CssClass="form-control">
                     <asp:ListItem>mensual</asp:ListItem>
-                    <asp:ListItem>you</asp:ListItem>
+                    <asp:ListItem>cuatrimestral</asp:ListItem>
+                    <asp:ListItem>anual</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
                 <asp:Label ID="Label7" runat="server" Text="Datos"></asp:Label>
-                <asp:DropDownList ID="ddlDatos" runat="server" CssClass="form-control">
+                <asp:DropDownList ID="ddlDatos" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlDatos_SelectedIndexChanged">
                     <asp:ListItem></asp:ListItem>
                     <asp:ListItem>Profesores</asp:ListItem>
                     <asp:ListItem>Mercadeo</asp:ListItem>
@@ -43,9 +48,6 @@
                 <div class="form-group">
                     <asp:Label ID="Label5" runat="server" Text="Campo"></asp:Label>
                     <asp:DropDownList ID="ddlCampo" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged" CssClass="form-control">
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem>Llamadas</asp:ListItem>
-                        <asp:ListItem>Llamadas Efectivas</asp:ListItem>
                     </asp:DropDownList>
                     <asp:Label ID="Label6" runat="server" Text="Valor"></asp:Label>
                     <asp:TextBox ID="txtValor" runat="server" CssClass="form-control"></asp:TextBox>
@@ -60,7 +62,7 @@
                     <br />
                     <asp:TextBox ID="txtFormula" runat="server" CssClass="form-control" ReadOnly="True" Width="307px"></asp:TextBox>
 
-                    <asp:Button ID="btnBorrar" runat="server" CssClass="btn btn-default" Text="Borrar" />
+                    <asp:Button ID="btnBorrar" runat="server" CssClass="btn btn-default" Text="Borrar" OnClick="btnBorrar_Click" />
 
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" Style="margin-top: 0px" HeaderText="Solo se admiten numeros" />
                 </div>

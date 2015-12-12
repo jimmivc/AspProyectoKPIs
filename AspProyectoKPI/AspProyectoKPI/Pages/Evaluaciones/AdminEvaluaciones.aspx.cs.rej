@@ -1,0 +1,18 @@
+diff a/AspProyectoKPI/AspProyectoKPI/Pages/Evaluaciones/AdminEvaluaciones.aspx.cs b/AspProyectoKPI/AspProyectoKPI/Pages/Evaluaciones/AdminEvaluaciones.aspx.cs	(rejected hunks)
+@@ -14,14 +14,6 @@
+ 
+         }
+ 
+-        protected void Button1_Click(object sender, EventArgs e)
+-        {
+-            Response.Redirect("GestionPreguntas.aspx");
+-        }
+-
+-        protected void Button2_Click(object sender, EventArgs e)
+-        {
+-            Response.Redirect("GestionEvaluaciones.aspx");
+-        }
++       
+     }
+ }
+\ No newline at end of file
