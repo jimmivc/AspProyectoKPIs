@@ -20,16 +20,9 @@
       
 
   </div>
-  <div class="col-sm-4"><h3">Gestión de encuestas</h3>
-      <p>Gestión de encuestas, creación de plantillas, generación de encuestas y envío a estudiantes</p>
-      <a runat="server" href="~/Pages/Evaluaciones/GenerarEncuesta" class="btn btn-default btn-lg">Gestión de encuestas</a>
-      
-  </div>
-
-       
   <div class="col-sm-4"><h3>Generación de encuestas</h3>
       <p>Generación de encuestas, creación de encuestas emitidas para los estudiantes calificando los profesores</p>
-      <a runat="server" href="~/Pages/Evaluaciones/GestionEncuestas" class="btn btn-default btn-lg">Gestión de encuestas</a>
+      <a runat="server" href="~/Pages/Evaluaciones/GestionEvaluaciones" class="btn btn-default btn-lg">Gestión de encuestas</a>
       
   </div>
 

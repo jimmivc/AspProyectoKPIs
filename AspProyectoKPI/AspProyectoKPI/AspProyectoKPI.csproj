@@ -125,6 +125,7 @@
     <Content Include="Pages\Evaluaciones\GestionPreguntas.aspx" />
     <Content Include="Pages\KPIs\indicadoresKPI.aspx" />
     <Content Include="Pages\IniciarSesion.aspx" />
+    <Content Include="Pages\KPIs\resultadosKPI.aspx" />
     <Content Include="Scripts\AnimacionLogIn.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -265,6 +266,13 @@
     </Compile>
     <Compile Include="Pages\IniciarSesion.aspx.designer.cs">
       <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KPIs\resultadosKPI.aspx.cs">
+      <DependentUpon>resultadosKPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\KPIs\resultadosKPI.aspx.designer.cs">
+      <DependentUpon>resultadosKPI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

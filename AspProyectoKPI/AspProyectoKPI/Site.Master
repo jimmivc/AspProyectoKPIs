@@ -54,10 +54,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a runat="server" href="~/">Inicio</a></li>
-                        <li id="holi" ><a runat="server" href="~/Pages/KPIs/IndicadoresKPI">KPIs</a></li>
+                        <li><a runat="server" href="~/Pages/KPIs/IndicadoresKPI">KPIs</a></li>
                         <li><a runat="server" href="~/Pages/Evaluaciones/AdminEvaluaciones">Evaluaciones</a></li>
-                        <li><a runat="server" href="~/Pages/Evaluaciones/ResultadosEvaluaciones">Mis Resultados</a></li>
-                        <li><a runat="server" href="~/Pages/Evaluaciones/EvalucionesEstudiantes">Mis Evaluaciones</a></li>
                         <li><a runat="server" href="~/Pages/KPIs/ResultadosKPI">Resultados KPIs</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
