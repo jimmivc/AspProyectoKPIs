@@ -107,6 +107,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\login.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\CenfoLogo.gif" />
@@ -129,6 +130,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\login.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -202,10 +204,12 @@
     <Compile Include="Models\DetalleFormula.cs" />
     <Compile Include="Models\KPI.cs" />
     <Compile Include="Models\ParametroKPI.cs" />
+    <Compile Include="Models\Permiso.cs" />
     <Compile Include="Models\Plantilla.cs" />
     <Compile Include="Models\PlantillaDetalle.cs" />
     <Compile Include="Models\Pregunta.cs" />
     <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Pages\Evaluaciones\AdminEvaluaciones.aspx.cs">
       <DependentUpon>AdminEvaluaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -19,13 +19,13 @@
 
 
                 <asp:Panel ID="form" runat="server" class="form-horizontal panel-body">
-                    <div class="input-group">
+                    <div class="input-group" style="left: 0px; top: -5px">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
                             <asp:TextBox ID="user" runat="server" type="text" class="form-control" name="user" value="" placeholder="User"></asp:TextBox>
                         </span>
                     </div>
 
-                    <div class="input-group">
+                    <div class="input-group" style="left: 0px; top: -3px">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i>
                             <asp:TextBox ID="password" runat="server" type="password" class="form-control" name="password" placeholder="Password"></asp:TextBox>
                         </span>
@@ -34,7 +34,8 @@
                     <div class="container">
                         <div class="field col-md-4">
                             <div class="input-group">
-                                <asp:Button ID="Button1" runat="server" Text="Iniciar Sesion" class="btn btn-primary" />
+                                <asp:Button ID="Button1" runat="server" Text="Iniciar Sesion" class="btn btn-primary" OnClick="Button1_Click" />
+                                <asp:Label ID="Label1" CssClass="form-inline" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
                     </div>
