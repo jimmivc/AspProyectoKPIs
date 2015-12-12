@@ -13,18 +13,27 @@
     </div>
 
    <div class="row">
-  <div class="col-sm-6"><h3>Mantenimiento de encuestas</h3>
+  <div class="col-sm-4"><h3>Mantenimiento de encuestas</h3>
       <p>Gestión de preguntas para encuesta, creación de preguntas, modificación, categorización y asignación de rangos de calificación</p>
 
       <a runat="server" href="~/Pages/Evaluaciones/GestionPreguntas" class="btn btn-default btn-lg">Gestión de preguntas</a>
       
 
   </div>
-  <div class="col-sm-6"><h3>Gestión de encuestas</h3>
+  <div class="col-sm-4"><h3">Gestión de encuestas</h3>
       <p>Gestión de encuestas, creación de plantillas, generación de encuestas y envío a estudiantes</p>
+      <a runat="server" href="~/Pages/Evaluaciones/GenerarEncuesta" class="btn btn-default btn-lg">Gestión de encuestas</a>
+      
+  </div>
+
+       
+  <div class="col-sm-4"><h3>Generación de encuestas</h3>
+      <p>Generación de encuestas, creación de encuestas emitidas para los estudiantes calificando los profesores</p>
       <a runat="server" href="~/Pages/Evaluaciones/GestionEncuestas" class="btn btn-default btn-lg">Gestión de encuestas</a>
       
   </div>
+
+
   <div class="row">
       <div class="col-sm-12">
 

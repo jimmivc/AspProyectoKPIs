@@ -138,8 +138,8 @@ namespace AspProyectoKPI.Pages.KPIs
             DataTable preguntasTable = (DataTable)Session["PreguntasDataTable"];
             GridViewRow row = GridListaPreguntas.Rows[e.RowIndex];
 
-            Pregunta pregunta = new Pregunta(Convert.ToInt32(e.NewValues[0]), Convert.ToString(e.NewValues[1]), 
-                                new Categoria(Convert.ToInt32(e.NewValues[2]),"nueva", 1, 4));
+            Pregunta pregunta = new Pregunta(Convert.ToInt32(e.NewValues[0]), Convert.ToString(e.NewValues[1]),
+                                null);
 
             request.AddUrlSegment("id", Convert.ToString(e.NewValues[0]));
             request.AddJsonBody(pregunta);

@@ -29,10 +29,10 @@
                                 OnRowEditing="GridListaPreguntas_RowEditing" OnRowUpdating="GridListaPreguntas_RowUpdating" OnSelectedIndexChanged="GridListaPreguntas_SelectedIndexChanged">
                                 
                                 <Columns>
-                                    <asp:BoundField DataField="idPregunta" HeaderText="ID Pregunta" ReadOnly="True" ItemStyle-Width="90px"/>
+                                    <asp:BoundField DataField="idPregunta" HeaderText="ID Pregunta" ItemStyle-Width="90px"/>
                                     <asp:BoundField DataField="pregunta" HeaderText="Pregunta" ItemStyle-Width="550px"/>
                                     <asp:BoundField DataField="categoria" HeaderText="Categoría" ItemStyle-Width="110px"/>
-                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True">
+                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" causesvalidation="false" ShowSelectButton="True">
                                     <ControlStyle CssClass="btn btn-default btn-sm" />
                                     </asp:CommandField>
                                 </Columns>
@@ -51,6 +51,9 @@
                                         </asp:DropDownList>
                                         <asp:Button ID="Button1" runat="server" Text="Registrar" OnClick="Button1_Click" CssClass="btn btn-primary bt-md" />
                                     </p>
+                                    <p>
+                                        
+                                    </p>
                                 </div>
                         </div>
                         </asp:Panel>
@@ -67,7 +70,7 @@
                                     <asp:BoundField DataField="categoria" HeaderText="Categoría" />
                                     <asp:BoundField DataField="minimo" HeaderText="Puntaje mínimo" />
                                     <asp:BoundField DataField="maximo" HeaderText="Puntaje máximo" />
-                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" >
+                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" causesvalidation="false" ShowSelectButton="True" >
                                     <ControlStyle CssClass="btn btn-default btn-sm" />
                                     </asp:CommandField>
                                 </Columns>
@@ -84,7 +87,10 @@
                                         <asp:TextBox ID="TextCategoria" runat="server" Width="740px" placeholder="Escriba una categoría nueva."></asp:TextBox>
                                         <asp:TextBox ID="TextMinimo" runat="server" Width="740px" placeholder="Escriba el puntaje mínimo."></asp:TextBox>
                                         <asp:TextBox ID="TextMaximo" runat="server" Width="740px" placeholder="Escriba el puntaje máximo."></asp:TextBox>
-                                        <asp:Button ID="Button2" Text="Registrar" runat="server" CssClass="btn btn-primary" OnClick="Button2_Click" />
+                                        <asp:Button ID="Button2" Text="Registrar" runat="server" causesvalidation="false" CssClass="btn btn-primary" OnClick="Button2_Click" />
+                                        <p>
+                                        
+                                        </p>
                                     </p>
                                 </div>
 
