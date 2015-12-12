@@ -19,7 +19,7 @@ namespace AspProyectoKPI.Pages.KPIs
             if (!IsPostBack)
             {
                 loadRolData();
-                bindData();
+                bindData(true);
             }
         }
 
@@ -41,14 +41,15 @@ namespace AspProyectoKPI.Pages.KPIs
             
         }
 
-        private void bindData()
+        private void bindData(bool firstTime)
         {
             dtgIndicadoresKPI.DataSource = Session["indicadoresKPI"];
             dtgIndicadoresKPI.DataBind();
-
-            dtgIndicadoresAsignados.DataSource = Session["indicadoresKPIAsignados"];
-            dtgIndicadoresAsignados.DataBind();
-
+            if (!firstTime)
+            {
+                dtgIndicadoresAsignados.DataSource = Session["indicadoresKPIAsignados"];
+                dtgIndicadoresAsignados.DataBind();
+            }
         }
 
         protected void dtgIndicadoresKPI_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
@@ -103,7 +104,7 @@ namespace AspProyectoKPI.Pages.KPIs
                         tablaIndicadoresKPIAsignados.Rows.Add(kpi.KPIID, kpi.DescKpi, kpi.Formato, kpi.Objetivo, kpi.Periodicidad);
 
                 Session["indicadoresKPIAsignados"] = tablaIndicadoresKPIAsignados;
-                bindData();
+                bindData(false);
             }
         }
 

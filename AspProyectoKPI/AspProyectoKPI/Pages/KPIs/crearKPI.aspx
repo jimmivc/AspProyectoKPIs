@@ -36,7 +36,7 @@
                 <br />
                 <br />
                 <asp:Label ID="Label7" runat="server" Text="Datos"></asp:Label>
-                <asp:DropDownList ID="ddlDatos" runat="server" CssClass="form-control">
+                <asp:DropDownList ID="ddlDatos" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlDatos_SelectedIndexChanged">
                     <asp:ListItem></asp:ListItem>
                     <asp:ListItem>Profesores</asp:ListItem>
                     <asp:ListItem>Mercadeo</asp:ListItem>
@@ -48,13 +48,6 @@
                 <div class="form-group">
                     <asp:Label ID="Label5" runat="server" Text="Campo"></asp:Label>
                     <asp:DropDownList ID="ddlCampo" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged" CssClass="form-control">
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem>Llamadas</asp:ListItem>
-                        <asp:ListItem>Llamadas Efectivas</asp:ListItem>
-                        <asp:ListItem>Promedio Duracion Efectivas</asp:ListItem>
-                        <asp:ListItem>Duracion Llamadas Efectivas</asp:ListItem>
-                        <asp:ListItem>Cantidad Ventas</asp:ListItem>
-                        <asp:ListItem>Monto Ventas</asp:ListItem>
                     </asp:DropDownList>
                     <asp:Label ID="Label6" runat="server" Text="Valor"></asp:Label>
                     <asp:TextBox ID="txtValor" runat="server" CssClass="form-control"></asp:TextBox>
@@ -69,7 +62,7 @@
                     <br />
                     <asp:TextBox ID="txtFormula" runat="server" CssClass="form-control" ReadOnly="True" Width="307px"></asp:TextBox>
 
-                    <asp:Button ID="btnBorrar" runat="server" CssClass="btn btn-default" Text="Borrar" />
+                    <asp:Button ID="btnBorrar" runat="server" CssClass="btn btn-default" Text="Borrar" OnClick="btnBorrar_Click" />
 
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" Style="margin-top: 0px" HeaderText="Solo se admiten numeros" />
                 </div>
