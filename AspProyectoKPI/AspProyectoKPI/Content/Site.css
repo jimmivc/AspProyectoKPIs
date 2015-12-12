@@ -17,6 +17,9 @@ select,
 textarea {
     max-width: 280px;
 }
+.colorTitulos{
+   color:#BE81F7;
+}
 
 
 /* Responsive: Portrait tablets and up */
@@ -181,4 +184,8 @@ textarea {
 .jumbotron{
     background-color:#722d7b;
     color:#ecf0f1;
+}
+
+.colorTitulos{
+    color:#BE81F7;
 }
